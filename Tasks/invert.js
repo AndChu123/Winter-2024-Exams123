@@ -3,9 +3,9 @@
 
 const invert = (sourceArray) => {
   const keysCopy = [...Object.keys(sourceArray)];
-  keysCopy.forEach((_, i) => {
-    keysCopy[i] = sourceArray.pop();
-  });
+  for (const keys of keysCopy) {
+    keysCopy[keysCopy.indexOf(keys)] = sourceArray.pop();
+  }
   return keysCopy;
 };
 module.exports = invert;
