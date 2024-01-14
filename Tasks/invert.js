@@ -2,7 +2,7 @@
 'use strict';
 
 const invert = (sourceArray) => {
-  const keysCopy = Object.keys(sourceArray, 4);
+  const keysCopy = [...Object.keys(sourceArray)];
   keysCopy.forEach((_, i) => {
     keysCopy[i] = sourceArray.pop();
     ((x) => {
