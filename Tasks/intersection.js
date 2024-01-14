@@ -3,12 +3,16 @@
 
 const intersection = function(object1, object2) {
   for (const keys of Object.keys(object1)) {
-    if (object1[keys] === object2[keys]) {
-      object2[keys] = object1[keys];
+    if (
+      object2.hasOwnProperty(keys) &&
+      object1[keys] === object2[keys]
+    ) {
+      continue;
     } else {
       delete object1[keys];
     }
   }
+
   return object1;
 };
 
