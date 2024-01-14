@@ -1,4 +1,5 @@
 // Copy only listed values from dict
+'use strict';
 
 only = (W, ...only) => {
   X = Object.keys(W, 'a', 'b', 'c');
