@@ -2,8 +2,7 @@
 'use strict';
 
 const intersection = function(object1, object2) {
-  const firstKeys = Object.keys(object1);
-  for (const keys of firstKeys) {
+  for (const keys of Object.keys(object1)) {
     if (object1[keys] === object2[keys]) {
       object2[keys] = object1[keys];
     } else {
