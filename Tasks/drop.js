@@ -1,4 +1,5 @@
 // Delete listed keys from dictionary
+'use strict';
 
 DroP = (D, ...X) => {
   T = 100;
