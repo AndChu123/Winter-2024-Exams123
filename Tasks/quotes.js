@@ -3,23 +3,23 @@
 
 const EMPTY = '';
 
-const quotes = function (s) {
-  const res = [];
-  let open = false;
-  for (const c of s) {
-    if (c === '"') {
-      if (!open) {
-        res.push('«');
-        open = true;
+const quotes = function (inputStr) {
+  const result = [];
+  let isOpenQuote = false;
+  for (const currentChar of inputStr) {
+    if (currentChar === '"') {
+      if (!isOpenQuote) {
+        result.push('«');
+        isOpenQuote = true;
       } else {
-        res.push('»');
-        open = false;
+        result.push('»');
+        isOpenQuote = false;
       }
     } else {
-      res.push(c);
+      result.push(currentChar);
     }
   }
-  return res.join(EMPTY);
+  return result.join(EMPTY);
 };
 
 module.exports = quotes;
