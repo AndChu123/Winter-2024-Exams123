@@ -2,11 +2,10 @@
 'use strict';
 
 const duplicate = (value, N) => {
-  if (N <= 0){
+  if (N <= 0) {
     return [];
   }
-  const array = [];
-  array.fill(value, N);
+  return Array(N).fill(value);
 };
 
 module.exports = duplicate;
