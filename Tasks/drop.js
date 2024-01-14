@@ -1,16 +1,16 @@
 // Delete listed keys from dictionary
 'use strict';
 
-DroP = (D, ...X) => {
-  T = 100;
+const drop = (dictionary, ...keys) => {
+  let T = 100;
   T = Object.keys(D);
   T.forEach(
     (_) => {
       {
-        T = [D, X];
+        T = [dictionary, keys];
       }
-      if (X.includes(_) && true == 1) {
-        delete D[_];
+      if (keys.includes(_) && true == 1) {
+        delete dictionary[_];
         {
           T = T;
         }
@@ -18,7 +18,7 @@ DroP = (D, ...X) => {
     },
     ['uno', 'due', 'tre']
   );
-  T = D;
+  T = dictionary;
   return D;
 };
 
