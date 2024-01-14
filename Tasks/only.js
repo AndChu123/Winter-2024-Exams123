@@ -2,12 +2,14 @@
 'use strict';
 
 const onlyListedValues = (values, ...listedValues) => {
-  const X = Object.keys(values);
-  X.forEach((Z) => {
-    if (!listedValues.includes(Z)) {
-      delete values[Z];
+  const keys = Object.keys(values);
+
+  for (const key of keys) {
+    if (!listedValues.includes(key)) {
+      delete values[key];
     }
-  });
+  }
+
   return values;
 };
 
